@@ -1,10 +1,12 @@
 import React from 'react';
-import { Phone, MapPin, Camera, Share2, Mail } from 'lucide-react';
+import { Phone, MapPin, Camera, Share2, Mail, MessageSquare } from 'lucide-react';
+import { getWhatsAppLink } from '../services/dataService';
 
 interface Props {
   location: {
     address: string;
     phone: string;
+    whatsapp: string;
     maps_link: string;
   };
 }
@@ -40,17 +42,30 @@ const Footer: React.FC<Props> = ({ location }) => {
           <h3>Visit Us</h3>
           <ul className="contact-list">
             <li>
-              <a href={location.maps_link} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', gap: '15px' }}>
+              <a href={location.maps_link} target="_blank" rel="noopener noreferrer" className="contact-item">
                 <MapPin size={24} color="var(--primary)" />
                 <span>{location.address}</span>
               </a>
             </li>
             <li>
-              <a href={`tel:${location.phone}`} style={{ display: 'flex', gap: '15px' }}>
+              <a href={`tel:${location.phone}`} className="contact-item">
                 <Phone size={20} color="var(--primary)" />
                 <span>{location.phone}</span>
               </a>
             </li>
+            {location.whatsapp && (
+              <li>
+                <a 
+                  href={getWhatsAppLink(location.whatsapp)} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="contact-item"
+                >
+                  <MessageSquare size={20} color="var(--primary)" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
