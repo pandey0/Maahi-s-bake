@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Specialties from './components/Specialties'
-import Menu from './components/Menu'
-import Gallery from './components/Gallery'
+import ShopPage from './components/ShopPage'
 import About from './components/About'
 import Reviews from './components/Reviews'
 import EnquiryForm from './components/EnquiryForm'
@@ -65,19 +65,24 @@ function App() {
   if (!data) return null;
 
   return (
-    <div className="app">
-      <Header whatsapp={data.location.whatsapp} />
-      <main>
-        <Hero whatsapp={data.location.whatsapp} />
-        <Specialties items={data.specialties} whatsapp={data.location.whatsapp} />
-        <Menu menu={data.menu} whatsapp={data.location.whatsapp} />
-        <Gallery photos={data.gallery} />
-        <About />
-        <Reviews reviews={data.reviews} />
-        <EnquiryForm />
-      </main>
-      <Footer location={data.location} />
-    </div>
+    <Routes>
+      <Route path="/" element={
+        <div className="app">
+          <Header whatsapp={data.location.whatsapp} />
+          <main>
+            <Hero whatsapp={data.location.whatsapp} />
+            <Specialties items={data.specialties} whatsapp={data.location.whatsapp} />
+            <About />
+            <Reviews reviews={data.reviews} />
+            <EnquiryForm />
+          </main>
+          <Footer location={data.location} />
+        </div>
+      } />
+      <Route path="/shop" element={
+        <ShopPage menu={data.menu} whatsapp={data.location.whatsapp} />
+      } />
+    </Routes>
   )
 }
 

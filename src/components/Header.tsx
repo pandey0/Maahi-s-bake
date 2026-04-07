@@ -29,7 +29,6 @@ const Header: React.FC<Props> = ({ whatsapp }) => {
           <ul>
             <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
             <li><a href="#specialties" onClick={() => setIsMenuOpen(false)}>Specialties</a></li>
-            <li><a href="#gallery" onClick={() => setIsMenuOpen(false)}>Gallery</a></li>
             <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a></li>
             <li>
               <a 

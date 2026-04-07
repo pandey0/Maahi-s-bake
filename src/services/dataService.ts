@@ -13,8 +13,10 @@ export interface Specialty {
 export interface MenuItem {
   category: string;
   name: string;
-  price: string;
+  price: string; // This will act as the base price (e.g. for 0.5kg or 1 unit)
   description: string;
+  img?: string;
+  isPerKg?: boolean; // New field to identify cakes
 }
 
 export interface Review {

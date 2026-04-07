@@ -1,5 +1,6 @@
 import React from 'react';
-import { ChevronRight, Star } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronRight, Star, UtensilsCrossed, Clock, ShieldCheck, Heart } from 'lucide-react';
 import { getWhatsAppLink } from '../services/dataService';
 
 interface Props {
@@ -7,6 +8,8 @@ interface Props {
 }
 
 const Hero: React.FC<Props> = ({ whatsapp }) => {
+  const navigate = useNavigate();
+
   return (
     <section id="home" className="hero">
       <div className="container hero-content">
@@ -21,8 +24,33 @@ const Hero: React.FC<Props> = ({ whatsapp }) => {
             From signature butterscotch to custom celebration cakes, 
             we bake every bite with fresh ingredients and passion.
           </p>
-          <div className="hero-btns">
-            <a href="#specialties" className="btn btn-primary">View Menu</a>
+          
+          {/* Trust Bar - Great for filling space on mobile */}
+          <div className="trust-bar">
+            <div className="trust-item">
+              <Clock size={18} />
+              <span>Fresh Daily</span>
+            </div>
+            <div className="trust-item">
+              <ShieldCheck size={18} />
+              <span>Hygienic</span>
+            </div>
+            <div className="trust-item">
+              <Heart size={18} />
+              <span>Handcrafted</span>
+            </div>
+          </div>
+
+          {/* Mobile-only Explore Menu Button */}
+          <button 
+            onClick={() => navigate('/shop')} 
+            className="btn-explore-mobile"
+          >
+            <UtensilsCrossed size={20} /> Explore Full Menu
+          </button>
+
+          <div className="hero-btns desktop-btns">
+            <button onClick={() => navigate('/shop')} className="btn btn-primary">View Menu</button>
             <a 
               href={getWhatsAppLink(whatsapp)} 
               target="_blank" 
