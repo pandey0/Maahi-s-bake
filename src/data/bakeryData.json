@@ -1,0 +1,65 @@
+{
+  "location": {
+    "address": "No. 32, 2nd Cross, Vinayaka Enclave, Kereguddadahalli, Chikkabanavara, Bengaluru, Karnataka 560090",
+    "phone": "+91 98765 43210",
+    "whatsapp": "+91 98765 43210",
+    "maps_link": "https://www.google.co.in/maps/place/Maahi's+bake/@13.0796207,77.5170304,17z/"
+  },
+  "specialties": [
+    {
+      "name": "Butterscotch Cake",
+      "price": "₹489 / 500g",
+      "img": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&q=60",
+      "desc": "Our best-selling signature cake with rich caramel and crunchy nuts."
+    },
+    {
+      "name": "Butterscotch Pastry",
+      "price": "₹79",
+      "img": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=60",
+      "desc": "A quick, delightful slice of our signature butterscotch goodness."
+    },
+    {
+      "name": "Chocolate Truffle",
+      "price": "₹549 / 500g",
+      "img": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=60",
+      "desc": "Decadent dark chocolate ganache for the ultimate chocolate lovers."
+    },
+    {
+      "name": "Theme Cakes",
+      "price": "Starting ₹700",
+      "img": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=60",
+      "desc": "Customized designs for birthdays, anniversaries, and special moments."
+    }
+  ],
+  "menu": [
+    { "category": "Cakes", "name": "Vanilla Classic", "price": "₹399", "description": "Classic soft vanilla sponge with whipped cream." },
+    { "category": "Cakes", "name": "Black Forest", "price": "₹499", "description": "Chocolate sponge with cherries and cream." },
+    { "category": "Pastries", "name": "Choco Lava", "price": "₹60", "description": "Warm chocolate filled delight." },
+    { "category": "Pastries", "name": "Pineapple Slice", "price": "₹50", "description": "Fresh pineapple cream pastry." },
+    { "category": "Savories", "name": "Veg Puff", "price": "₹20", "description": "Crispy pastry with spicy veg filling." },
+    { "category": "Savories", "name": "Paneer Puff", "price": "₹30", "description": "Crispy pastry with paneer masala." }
+  ],
+  "reviews": [
+    {
+      "name": "Rahul Sharma",
+      "text": "The Butterscotch cake I ordered for my daughter's birthday was incredible. Fresh, moist, and perfectly decorated. Best bakery in Abbigere!",
+      "rating": 5
+    },
+    {
+      "name": "Priya K.",
+      "text": "Ordered a custom theme cake and they nailed the design. The quality of ingredients is clearly superior. Highly recommend Maahi's Bake.",
+      "rating": 5
+    },
+    {
+      "name": "Sandeep Rao",
+      "text": "Great taste and very hygienic. Their butterscotch pastries are a must-try. Always fresh and delivered on time.",
+      "rating": 5
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1557925923-33b27f891f88?auto=format&fit=crop&w=800&q=80"
+  ]
+}
